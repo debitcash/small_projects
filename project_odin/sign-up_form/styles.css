@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "Norse Bold";
+    src: url("assets/Norse-Bold.otf");
+}
+
+
+body{
+    display:flex;
+    justify-content: center;
+    font-family: "Helvetica", "Arial", sans-serif;
+    height:100vh;
+    width:100vw;
+    padding:0;
+    margin:0;
+}
+
+.content-container{
+    display:flex;
+    direction: row;;
+    width:80%;
+}
+
+input{
+    display:block;
+    margin-right:20px;
+}
+
+label{
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+input{
+    border:solid green 2px;
+    border-radius: 5px;
+}
+
+.inputs-container{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.phrase-container,.button-container{
+    background-color: #F6F7F8;
+}
+
+form{
+    background-color: aliceblue;
+}
+
+.picture-container{
+    background-image: url("assets/image.jpeg");
+    width:800px;
+    height:100%;
+    background-size: cover;
+    position:relative;
+}
+
+
+.text-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.phrase-container,.middle-container,.button-container{
+    height:33vh;
+    padding-left:30px;
+}
+
+.logo-container{
+    background-color: rgba(0, 0, 0, 0.5);
+    position:absolute;
+    height:10vh;
+    width:100%;
+    top:20%;
+    display:flex;
+    color:white;
+    justify-content: center;
+}
+
+img[src="assets/logo.png"]{
+    height:100%;
+}
+
+.logo-text{
+    align-self: center;
+    font-family: "Norse Bold";
+    font-size: 50px;
+}

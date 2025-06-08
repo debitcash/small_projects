@@ -13,50 +13,45 @@
                 <img src="assets/logo.png" alt="">
                 <p class="logo-text">ODIN</p>
             </div>
+            <span class="credits">Photo by <a href="https://www.instagram.com/asaprocky/#">Asap rocky</a></span>
         </div>
         <div class="text-container">
             <div class="phrase-container">
                 <p>This is not a real online service! You know you need something
                     like this in your life to help you realize your deepest dreams.
-                    Sign up <em>now</em> to get started.</p>
+                    <br>Sign up <em>now</em> to get started.</p>
                 <p>You <em>know</em> you want to.</p>
             </div>
-
             <form action="" method="post">
-                
                 <div class="middle-container">
                     <p>Let's do this!</p>
                     <div class="inputs-container">
-                        
                         <label for="first-name-input">FIRST NAME
-                            <input type="text" id="first-name-input">
+                            <input type="text" id="first-name-input" minlength="2" required>
                         </label>
                         <label for="last-name-input">LAST NAME
-                            <input type="text" id="last-name-input">
+                            <input type="text" id="last-name-input" minlength="2">
                         </label>
                         <label for="email-input">EMAIL
-                            <input type="text" id="email-input">
+                            <input type="email" id="email-input">
                         </label>
                         <label for="phone-input">PHONE NUMBER
-                            <input type="text" id="phone-input">
+                            <input type="tel" id="phone-input">
                         </label>
                         <label for="password-input">PASSWORD
-                            <input type="text" id="password-input">
+                            <input type="password" id="password-input" minlength="5" required>
                         </label>
                         <label for="confirm-password-input">CONFIRM PASSWORD
-                            <input type="text" id="confirm-password-input">
+                            <input type="password" id="confirm-password-input" minlength="5" required>
                         </label>
                     </div>
                 </div>
-
-
                 <div class="button-container">
-                    <button>Button</button>
+                    <button>Create Account</button>
+                    <span>Already have an account? <a href="" class="login">Log in</a></span>
                 </div>
-                
             </form>    
         </div>
-
     </div>
 </body>
 </html>

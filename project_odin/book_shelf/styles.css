@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2eee3;
+}
+
+.header {
+  background-image: url("images/wood.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 0;
+  padding: 20px;
+  color: white;
+}
+
+.header img {
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+  transition: transform 0.2s;
+}
+
+.header img:hover {
+  transform: scale(1.2);
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.unreadContainer,
+.readContainer{
+  display: flex;
+  align-items: flex-end;
+}
+
+.separator {
+  width: 50px;
+  height: 450px;
+  background-image: url("images/wood.png");
+}
+
+.footer {
+  height: 50px;
+  width: 100%;
+  background-image: url("images/wood.png");
+}
+
+.book {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  border: 3px solid gray;
+  border-radius: 5px;
+  margin: 0 5px;
+  overflow: hidden;
+}
+
+.book span {
+  writing-mode: sideways-lr;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+
+.book > div{
+  display:flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.5);
+  width:100%;
+  height:100%;
+  align-items: center;
+}
+
+dialog {
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+dialog form input[type="text"],
+dialog form input[type="number"]{
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+dialog form input[type="number"]{
+  width:8ch;
+}
+
+dialog button{
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+dialog form button[type="submit"] {
+  background-color: #4CAF50;
+}
+
+form div{
+  margin-bottom: 10px;
+}

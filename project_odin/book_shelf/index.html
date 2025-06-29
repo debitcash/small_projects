@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The book library</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js" defer></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>The book library</h1>
+      <img src="images/add_book.png" alt="add_book.png">
+    </div>
+    <div class="content">
+      <div class="unreadContainer"></div>
+      <div class="separator"></div>
+      <div class="readContainer"></div>
+    </div>
+    <div class="footer"></div>
+    <dialog>
+      <button autofocus>Close</button>
+      <form method="post">
+        <input type="text" placeholder="Author" id="authorInput" name="authorInput" required>
+        <input type="text" placeholder="Title" id="titleInput" required>
+        <input type="number" placeholder="Pages" id="pagesInput" max="1200" min="50" required>
+        <div>
+          <input type="checkbox" placeholder="123" id="isReadInput">
+          <label for="isReadInput">Read</label>
+        </div>
+        <button type="submit">Add</button>
+      </form>
+    </dialog>
+  </body>
+</html>

@@ -1,8 +1,7 @@
 const myLibrary = [];
 
-Book.longestPages = 1200;
-
-function Book(author, title, pages, isRead){
+class Book {
+    constructor(author, title, pages, isRead){
     this.author = author;
     this.title = title;
     this.pages = pages;
@@ -10,7 +9,9 @@ function Book(author, title, pages, isRead){
     this.height = `${ Math.random() * (90 - 40) + 40}%`;
     this.id = crypto.randomUUID();
     this.bookColor = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
+    }
 }
+Book.longestPages = 1200;
 
 function addBookToLibrary(author, title, pages, isRead){
     let newBook = new Book(author, title, pages, isRead);

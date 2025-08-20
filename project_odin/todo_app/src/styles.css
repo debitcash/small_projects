@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  background-color: #F0F2F0;
+  height:100vh;
+  width:100vw;
+  margin :0;
+  font-family: "Roboto", sans-serif;
+  display:flex;
+  color: #F0F2F0;
+}
+
+.sidebar{
+  background-color: #4A6D5A;
+  height: 100%;
+  display:inline-flex;
+  color: #F0F2F0;
+}
+
+.menuContainer{
+  display:flex;
+  flex-direction: column;
+  gap:30px;
+  padding:30px;
+}
+
+.maincontent{
+  display:inline-block;
+  width:100%;
+  min-width: 700px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  margin-left: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding:10px;
+  background-color: #4A6D5A;
+}
+
+.tasksOption, .projectsOption{
+  margin:20px;
+}
+
+input[type="radio"]{
+  height:18px;
+  width:18px;
+}
+
+input[type="radio"]:nth-child(2){
+  accent-color: green;
+}
+input[type="radio"]:nth-child(3){
+  accent-color: yellow;
+}
+input[type="radio"]:nth-child(4){
+  accent-color: red;
+}
+
+input:not(input[type="radio"]),textarea,select{
+  background-color: #F0F2F0;
+  border:none;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px #333333;
+}
+
+legend{
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+fieldset{
+  display: flex;
+  justify-content: space-evenly;
+  border:none;
+  border-radius: 3px;
+}
+
+button{
+  border:none;
+  border-radius: 3px;
+  display:inline-block;
+  background-color: transparent;
+  border:1px solid #F0F2F0;
+  color:#C2C4C2;
+  width:45%;
+  height:20px;
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button[type="submit"]{
+  color:#F0F2F0;
+}
+
+form > div{
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskContainer{
+  display:flex;
+  margin-top:10px;
+  padding:10px;
+  flex-direction:column;
+  border-top: #333333 solid;
+  gap: 10px;
+  border-radius: 8px;
+}
+
+.projectCard{
+  background-color: #769C87;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 15px;
+  padding: 15px;
+  width: 250px;
+  height:300px;
+  overflow: auto;
+}
+
+.projectCard > span{
+  font-size: 1.5rem;
+}
+
+.projectsContainer{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.standaloneTasksContainer{
+  width:70%;
+  margin-left: auto;
+  margin-right:auto;
+  height: auto;
+  width: auto;
+}
+
+.emptyContainer{
+  margin: 15px;
+  padding: 15px;
+  background-color: #769C87;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.standaloneTasksContainer .projectCard{
+  height:auto;
+  width: auto;
+}
+
+.emptyContainer span {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+svg{
+  fill: coral;
+}
+
+.projectsOption{
+  display:flex;
+  width:200px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+svg{
+  width:25px;
+}
+
+.projectCard svg{
+  margin-left:auto;
+}
+
+.projectCard svg {
+  visibility: hidden;
+}
+
+.projectCard:hover svg{
+  visibility:visible;
+}
+
+.maincontent > .taskContainer{
+  background-color: #769C87;
+  border-top: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+textarea {
+  resize: none;
+  height: 5rem;
+}
+
+dialog[open]{
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+dialog form{
+  margin: 0;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5); 
+}

@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    width:100%;
+    margin :0;
+    padding:0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #87CEEB;
+    font-family: "Roboto", sans-serif;
+}
+
+form{
+    width:500px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    padding:50px;
+}
+
+input, button, li{
+    height:60px;
+    margin:0;
+    font-size: 1.3rem;
+    border:none;
+    box-sizing: border-box;
+}
+
+input{
+    border-radius: 20px 0 0 20px;
+    padding-left: 20px;
+    background-color: #E0F7FA;
+}
+
+button{
+    border-radius: 0 20px 20px 0;
+    background-color: #FFD54F;
+}
+
+.todayContainer{
+    width:500px;
+    font-size: 1.5rem;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    padding: 20px;
+    gap:20px;
+}
+
+.topPortion{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+}
+
+.topPortion div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 300px;
+}
+
+.weekContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.dayContainer{
+    display:flex;
+    gap:10px;
+}
+
+.dayContainer div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+ul{
+    list-style-type: none;
+    border-color: #E0F7FA;
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+    padding:0;
+    margin:0;
+    margin-left: 20px;
+    border-radius: 0px 0px 20px 20px;
+    overflow: hidden;
+}
+
+li{
+    background-color: #FFFFFF;
+    color:#333333;    
+    display: flex;
+    align-items: center;
+    padding-left:10px;
+    overflow: hidden;
+    width:217px;
+    text-overflow: clip;
+    white-space: nowrap;
+}
+
+li:hover{
+    background-color: #B2EBF2;
+}
+
+.loader{
+    border: 16px solid #f3f3f3;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+    border-top: 16px solid #3498db;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+dialog{
+    margin-top: auto;
+    margin-bottom: auto;
+    border:none;
+}
+
+dialog{
+    text-align: center;
+}
+
+.inputAndAutocompleteContainer{
+    display: flex;
+    flex-direction: column;
+}

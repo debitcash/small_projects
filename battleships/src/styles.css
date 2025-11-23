@@ -1,0 +1,66 @@
+/* styles.css */
+body {
+  background-color: grey;
+}
+
+.activePlayerBoard, .inputBoard, .waitingPlayerBoard{
+  background-color: white;
+  height: 200px;
+  width:200px;
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.activePlayerBoard{
+  background: #f6f6f6;
+}
+
+.waitingPlayerBoard{
+  background-color: #e5e5e5;
+}
+
+button{
+  height:80px;
+  width:100px;
+  border:none;
+  border-radius: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  font-size: 1.5rem;
+  margin-bottom: 100px;
+}
+
+button:hover{
+  transform: scale(1.05);
+  background: #45a049;
+}
+
+form button{
+  border-radius: 0 50% 50% 0;
+  justify-content:center;
+}
+
+body{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+select{
+  height:80px;
+  width:100px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50% 0 0 50%;
+  text-align: center; 
+}
+
+form{
+  display: flex;
+}
+
+.boardsContainer{
+  display: flex;
+  gap: 48px;
+}

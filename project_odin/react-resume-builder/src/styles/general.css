@@ -1,0 +1,126 @@
+body{
+	background-color: darkolivegreen;
+}
+
+.output,.inputSections{
+	background-color: olive;
+	padding:24px;
+	border-radius: 16px;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+	z-index: 1;
+}
+
+.inputSections{
+	transform:translateX(130px);
+}
+
+.output{
+	background-color: whitesmoke;
+	color: black;
+	width: 210mm;
+  	height: 290mm;
+	padding:0;
+	padding-left: 24px;
+	padding-right: 24px;
+	align-items: center;
+	border-radius: 0;
+	transform: translateX(-130px);
+	z-index: 0;
+}
+
+#root{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	width:100%;
+	align-items: center;
+	min-width:1500px;
+}
+
+ul{
+	list-style: none;
+	padding-left:16px;
+}
+
+li{
+	display:flex;
+	justify-content: space-between;
+}
+
+.buttonsContainer,.controlButtonsContainer{
+	margin-top:24px;
+	margin-bottom:24px;
+	display: flex;
+	gap:24px;
+	justify-content: center;
+}
+
+.outputContainer > div{
+	display: flex;
+	flex-direction: column;
+	margin-bottom:16px;
+}
+
+.outputContainer:nth-child(1){
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.outputContainer:nth-child(1) > div{
+	align-items: center;
+}
+
+.outputContainer:nth-child(1) > div span{
+	width: fit-content;
+}
+
+.outputContainer:nth-child(1) > div span:nth-child(1){
+	font-size: 1.3rem;
+	font-weight: bold;
+	padding-top: 64px;
+}
+
+.controlButtonsContainer{
+	margin-top:64px;
+}
+
+.revealedSheet{
+	animation: 2s reveal;
+	animation-fill-mode: forwards;
+}
+
+.hiddenSheet{
+	animation: 2s hide;
+	animation-fill-mode: forwards;
+}
+
+@keyframes reveal{
+	from{
+		z-index: 0;
+	}
+
+	50%{
+		transform:translateX(0px);
+	}
+
+	to{
+		transform:translateX(-130px);
+		z-index: 1;
+	}
+}
+
+@keyframes hide{
+	from{
+		transform:translateX(-130px);
+		z-index: 1;
+	}
+
+	50%{
+		transform:translateX(0px);
+	}
+
+	to{
+		z-index: 0;
+	}
+}

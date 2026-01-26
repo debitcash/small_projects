@@ -1,0 +1,20 @@
+button{
+    font-size: 20px;
+    border: 0;
+}
+
+.productInCart{
+    margin-bottom: 32px;
+}
+
+.cartContainer{
+    color:white;
+}
+
+.cartContainer button:nth-of-type(1){
+    background-color: red;
+}
+
+.cartContainer button:nth-of-type(2){
+    background-color: green;
+}

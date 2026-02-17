@@ -1,0 +1,25 @@
+<!-- index.ejs -->
+<html>
+  <head>
+  </head>
+
+  <body>
+    <h1>INDEX PAIGE</h1>
+	<a href="/new">ADD NEW MESSAGE</a>
+
+	<ul>
+		<% for (let i =0; i < messages.length; i++){ %>
+	
+		<li>
+			<%- include('post', {message:messages[i]}) %>
+			<a href="<%="/posts/"+ i %>">Check the post</a>
+
+		</li>
+
+		
+
+		<% } %>
+	</ul>  
+  </body>
+</html>
+

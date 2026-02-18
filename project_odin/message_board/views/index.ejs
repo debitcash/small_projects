@@ -8,11 +8,11 @@
 	<a href="/new">ADD NEW MESSAGE</a>
 
 	<ul>
-		<% for (let i =0; i < messages.length; i++){ %>
+		<% for (let i =0; i < records.length; i++){ %>
 	
 		<li>
-			<%- include('post', {message:messages[i]}) %>
-			<a href="<%="/posts/"+ i %>">Check the post</a>
+			<%- include('post', {record:records[i]}) %>
+			<a href="<%="/posts/"+ records[i].id %>">Check the post</a>
 
 		</li>
 

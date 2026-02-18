@@ -2,7 +2,7 @@ const { Client } = require("pg");
 const dotenv = require("dotenv");
 const pool = require("./pool");
 
-const env = dotenv.config().parsed;
+const env = dotenv.config();
 
 const SQL = `
 CREATE TABLE IF NOT EXISTS recordstable (
@@ -25,7 +25,7 @@ async function main() {
     
 
   const client = new Client({
-    connectionString: `postgresql://${env.USER}:${env.PASSWORD}@${env.URI}/${env.DATABASE}`,
+    connectionString: `postgresql://${env.process.USER}:${env.process.PASSWORD}@${env.process.URI}/${env.process.DATABASE}`,
   });
 
   try {

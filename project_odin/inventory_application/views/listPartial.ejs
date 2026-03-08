@@ -1,0 +1,21 @@
+<ul>
+    <% for (let i = 0; i < items.length; i++) {%>
+        <li class="categoryInfo">
+            <% if (!urlPortion.includes("books")){%>
+                <a href="<%= urlPortion + items[i].toLowerCase() %>" class="categoryName"><%=  items[i] %></a>
+
+                    <div class="updateOptions">
+                        <a href="<%= urlPortion + items[i] %>/update">Update</a>
+                        <form method="POST" action="<%= urlPortion + items[i] %>?action=delete">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </div>
+
+
+            <% } else {%>
+                <span><%=  items[i] %></span>
+            <% } %>
+
+        </li>
+    <% } %>
+</ul>

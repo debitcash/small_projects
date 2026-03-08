@@ -1,0 +1,28 @@
+<div class="bookCard">
+    <div class="bookInfo">
+        <span class="title"><%= bookInfo.title %> (ID: <%= bookInfo.id %>)</span>
+        <span>By <%= bookInfo.author %></span>
+        <div class="titleGenres">
+            <span>Genres:</span>
+            <% for (let i = 0; i < correspondingGenres.length; i++) {%>
+                <span><%= correspondingGenres[i].name %></span>
+            <% } %>
+        </div>
+    </div>
+    <div>
+        <form action="<%= currentUrl %>?action=addCover" method="POST" class="addCategoryContainer">
+                <button type="submit">Add cover to <%= bookInfo.title %></button>
+                <input type="text" name ="pictureUrl" placeholder="Picture URL" >
+                <input type="text" name ="description" placeholder="Description" >
+        </form>
+        
+        <% if (typeof genreName !== "undefined") { %>
+            <%- include ('listPartial', {items:coverIds, urlPortion:`/genres/${genreName}/${bookInfo.id}/`}) %>
+        <% } else {%>
+            <%- include ('listPartial', {items:coverIds, urlPortion:`/books/${bookInfo.id}/`}) %>
+        <% } %>
+    </div>  
+</div>
+
+
+        

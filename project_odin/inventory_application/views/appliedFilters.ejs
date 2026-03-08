@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Covers Lovers</h1>
+        <h3>Inventory application</h2>
+    </div>
+
+    <div class="mainContainer">
+        
+        
+            <% if (typeof loggedIn !== "undefined") { %>
+                <div class="listContainer"></div>
+                    <% if (!loggedIn) { %>
+                    <h3>Please sign in to make changes in the storage</h3>
+                    <form action="/auth" method="POST">
+                        <input type="text" name ="login" placeholder="login" >
+                        <input type="text" name ="pass" placeholder="password" >
+                        <button type="submit">Submit</button>
+                    </form>
+                    <%} else { %>
+                        <h3>You are logged in!</h3>
+                    <% } %>
+                </div>    
+            <% } %>
+        
+        <div class="listContainer">
+            <ul>
+                <li><a href="/genres">Genres</a></li>
+                <li><a href="/books">All books</a></li>
+                <li><a href="/covers">All covers</a></li>
+            </ul>
+        </div>
+
+        <!-- NEW VALUES fields for the update-->
+        <% if (typeof fieldsToBeUpdated !== "undefined") { %>
+            <form action="<%= currentUrl %>" method="POST" >
+             <% for (let i = 0; i < fieldsToBeUpdated.length; i++) {%>
+                <label for="<%= fieldsToBeUpdated[i].tableColumn %>"> <%= fieldsToBeUpdated[i].tableColumn %>
+                    <input type="text" name="<%= fieldsToBeUpdated[i].tableColumn %>" placeholder="<%= fieldsToBeUpdated[i].value %>" value="<%= fieldsToBeUpdated[i].value %>">
+                </label>
+            <% } %>
+                <% if (typeof genresToBeSelected !== "undefined") { %>
+                    <% for (let i = 0; i < genresToBeSelected.length; i++) {%>
+                        <label for="<%= genresToBeSelected[i].id %>"><%= genresToBeSelected[i].name %>
+                            <input type="checkbox" name="genresId[]" value="<%= genresToBeSelected[i].id %>" id="<%= genresToBeSelected[i].id %>"
+                            <%= appliedGenreIds.includes(genresToBeSelected[i].id) && "checked" %> >
+                        </label>
+                    <% } %>
+                <% } %>
+                <button type="submit">Update</button>
+            </form>
+        <% } %>
+        <div>
+            
+                <!-- SHOW all present genres -->
+            <% if (typeof genres !== "undefined") { %>
+                    <form action="<%= currentUrl %>" method="POST" class="addCategoryContainer">
+                        <button type="submit">Add Genre</button>
+                        <input type="text" name ="newGenre" placeholder="Genre name" >
+                    </form>
+                    <%- include ('listPartial', {items:genres, urlPortion:"/genres/"}) %>
+            
+            <% } %>
+        </div>
+        <!-- SHOW all books from certain genre -->
+        <div>
+            <% if (typeof titles !== "undefined") { %>
+                <form action="<%= currentUrl %>?action=addBook" method="POST" class="addCategoryContainer">
+                        <button type="submit">Add Book to <%= genreName %></button>
+                        <input type="text" name ="title" placeholder="title" >
+                        <input type="text" name ="author" placeholder="author" >
+                </form>
+            
+                <% if (typeof loggedIn !== "undefined" && loggedIn) { %>
+                    <%- include ('listPartial', {items:titles, urlPortion:`/genres/${genreName}/`}) %>
+                <% } else{%>
+                    <%- include ('listPartial', {items:titles, urlPortion:`/genres/${genreName}/`}) %>
+                <% } %>
+            <% } %>
+            <!-- If just books were provided -->
+            <% if (typeof bookNames !== "undefined") { %>
+                <form action="<%= currentUrl %>?action=addBook" method="POST" >
+                        <button type="submit">Add Book</button>
+                        <input type="text" name ="title" placeholder="title" >
+                        <input type="text" name ="author" placeholder="author" >
+            
+                        <% for (let i = 0; i < genresToBeSelected.length; i++) {%>
+                            <label for="<%= genresToBeSelected[i].id %>"><%= genresToBeSelected[i].name %>
+                                <input type="checkbox" name="genresId[]" value="<%= genresToBeSelected[i].id %>" id="<%= genresToBeSelected[i].id %>">
+                            </label>
+                        <% } %>
+                </form>
+                <%- include ('listPartial', {items:bookNames, urlPortion:`/books/`}) %>
+            <% } %>
+        </div>
+        <% if (typeof bookInfo !== "undefined") { %>
+        
+            <%- include ('bookCardPartial', {bookInfo:bookInfo,correspondingGenres:correspondingGenres}) %>
+        <% } %>
+        
+        <% if (typeof imageUrl !== "undefined") { %>
+        
+            <div class="imageContainer"><img src="<%= imageUrl %>" alt=""></div>
+        <% } %>
+        
+        <% if (typeof allCovers !== "undefined") { %>
+            <div class="images">
+                <form action="covers" method="POST" class="addCategoryContainer">
+                        <button type="submit">Add cover</button>
+                        <input type="text" name ="pictureUrl" placeholder="Picture URL" >
+                        <input type="text" name ="description" placeholder="Description" >
+                        <input type="text" name ="bookId" placeholder="Book Id" >
+                </form>
+                <div class="allImagesContainer">
+                    <% for (let i = 0; i < allCovers.length; i++) { %>
+                        <img src="<%= allCovers[i] %>" alt="">
+                    <% } %>
+                </div>
+            </div>
+        <% } %>
+    </div>
+
+
+</body>
+</html>

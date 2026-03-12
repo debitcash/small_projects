@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ALLAHUAKBAR!</h1>
+    <% if (user) { %>
+        <p>Welcome <%= user.first %></p>
+        <a href="/log-out">LOGOUT</a>
+
+        <form action="/" method="POST">
+            <label for="title">Title</label>
+            <input id="title" name="title" placeholder="title" type="text" />
+            <label for="text">Text</label>
+            <input id="text" name="text" type="text" />
+            <button type="submit">Post</button>
+        </form>
+
+        <%- include ('messagesContainer', { allPosts:allPosts, user:user }) %>
+
+        <% } else { %>
+        <p>Please log in</p>
+    <% } %>
+
+    
+</body>
+</html>

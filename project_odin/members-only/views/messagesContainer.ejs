@@ -1,0 +1,24 @@
+<div>
+    <h2>MESSAGES</h2>
+
+     <% for (let i = 0; i < allPosts.length; i++) {%>
+        <div>
+            
+            <% if (typeof user !== "undefined" && user.membership_type === "advanced") { %>
+                <span>Name: <%= allPosts[i].first + allPosts[i].last %> @ <%= allPosts[i].time %></span>
+            <% } %>
+
+            <span>Title: <%= allPosts[i].title %></span>
+            <span>Text: <%= allPosts[i].text %></span>
+
+            <% if (typeof user !== "undefined" && user.admin === "T") { %>
+                <form action="/delete_message" method="POST">
+                    <input type="hidden" name="message_text" value="<%= allPosts[i].text %>">
+                    <button type="submit">---Delete message---</button>
+                </form>
+            <% } %>
+
+            <br>
+        </div>
+    <% } %>
+</div>

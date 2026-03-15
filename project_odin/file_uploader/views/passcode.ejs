@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Passcode</h1>
+
+    <% for (let i = 0; i < files.length; i++) {%>
+        <span><%= files[i].name %></span>
+        <span><%= files[i].size %></span>
+        <br>
+        <form action="<%= '/passcode/download' + '?fileId=' + files[i].id  %>" method="post">
+            <button type="submit">download</button>
+        </form>
+        <br>
+    <% } %>
+</body>
+</html>

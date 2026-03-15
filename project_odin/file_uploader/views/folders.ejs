@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Folders</h1>
+    <%- include('foldersPartial', { folders: folders }) %>
+    <div>
+        <h3>Now in folder: <%= containerFolder %></h3>
+        <form action="<%= '/folders/' + containerFolder + '/update' %>" method="post">
+            Parent<input type="text" name="parent" value="<%= currentFolder.parent %>">
+            Name<input type="text" name="name" value="<%= currentFolder.name %>">
+            <button type="submit">Update</button>
+        </form>
+        <form action="<%= '/folders/' + containerFolder + '/delete' %>" method="post">
+            <button type="submit">DELETE</button>
+        </form>
+        
+        <br>
+        <br>
+        <br>
+        <form action="<%= '/passcode/' + containerFolder + '/create' %>" method="post">
+            <% if (typeof passcode !== "undefined"){ %> <span>Generated passcode: <%=  passcode %></span> <% } %>
+            <button type="submit">Create passcode for 1 day</button>
+        </form>
+
+
+        <br>
+        <br>
+        <h4>Add subfolder</h4>
+        <form action="<%= '/folders/' + containerFolder + '/addSubfolder' %>" method="post">
+            Name<input type="text" name="name" placeholder="New Folder Name">
+            <button type="submit">Add subfolder</button>
+        </form>
+        <br>
+        <form action="<%= '/folders/' + containerFolder %>" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" />
+            <button type="submit">SUBMIT</button>
+        </form>
+
+        <% if (typeof files !== undefined) { %>
+            <% for (let i = 0; i < files.length; i++) {%>
+                <span><%= files[i].name %></span>
+                <span><%= files[i].size %></span>
+                <br>
+                <form action="<%= '/folders/' + containerFolder + '/download' + '?fileId=' + files[i].id  %>" method="post">
+                    <button type="submit">download</button>
+                </form>
+                <br>
+            <% } %>
+        <% } %>
+
+
+    </div>
+</body>
+</html>

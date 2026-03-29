@@ -1,0 +1,24 @@
+#oval{
+    height:50px;
+    width:50px;
+    position: absolute;
+    top:300px;
+    border-radius: 50%;
+    border:2px dashed burlywood;
+    animation: 0.3s pulse infinite alternate;
+    animation-timing-function: linear; 
+    translate: -50% -50%;
+    display: none;
+}
+
+
+@keyframes pulse {
+  from {
+    padding:10px;
+  }
+
+  to {
+    padding:30px;
+    
+  }
+}

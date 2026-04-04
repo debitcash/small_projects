@@ -1,0 +1,16 @@
+.messengerContainer{
+    display:flex;
+    flex-direction: row;
+    gap:24px;
+}
+
+.contacts{
+    display:flex;
+    flex-direction: column;
+}
+
+.messages{
+    display:flex;
+    flex-direction: column;
+    
+}

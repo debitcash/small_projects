@@ -1,0 +1,13 @@
+.levelsContainer{
+    display:flex;
+    gap:32px;
+    justify-content: space-between;
+}
+
+.levelsContainer img{
+    max-width: 100%;
+}
+
+.levelOption{
+    width:30%;
+}

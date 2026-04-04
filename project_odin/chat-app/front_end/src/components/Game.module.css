@@ -1,0 +1,41 @@
+.creaturesContainer{
+    height:100px;
+}
+
+.smallImage{
+    
+}
+
+.greenBorder{
+    border:solid green 10px;
+}
+
+.creaturesContainer{
+    display:flex;
+    gap:15px;
+    justify-content: center;
+    height:200px;
+}
+
+.canvasContainer{
+    position:relative;
+}
+
+.bigImage{
+    max-width: 100%;
+}
+
+.heroLookupContainer{
+    height:100px;
+    width:300px;
+    background-color: aqua;
+    position: absolute;
+    overflow: hidden;
+    display:none;
+    gap:16px;
+}
+
+.gameContainer{
+    margin:128px;
+}
+

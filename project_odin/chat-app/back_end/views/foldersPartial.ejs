@@ -1,0 +1,11 @@
+
+<ul>
+  <% folders.forEach(folder => { %>
+    <li>
+      <a href="<%= '/folders/' + folder.id %>"><%= folder.id %></a>
+      <% if (folder.children && folder.children.length) { %>
+        <%- include('foldersPartial', { folders: folder["children"] }) %>
+      <% } %>
+    </li>
+  <% }) %>
+</ul>

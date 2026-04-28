@@ -1,0 +1,143 @@
+.bigPostsContainer{
+    margin: 36px 0;
+    width:500px;
+    font-family: 'Space Grotesk Bold';
+    display: flex;
+    flex-direction: column;
+    gap:36px;
+}
+
+.bigPostHeader{
+    padding: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.bigPost{
+    background-color: #1B1B1B;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.bigPostHeader > div{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.bigPostHeader img{
+    height:32px;
+    width: 32px;
+    object-fit: cover;
+    border-radius:50%;
+}
+
+.bigPostHeader span{
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.bigPost > img{
+    width:100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bigPost p{
+    padding: 0 14px;
+    font-family: 'Work Sans Regular';
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.bigPostStats img{
+    width:24px;
+    height: auto;
+}
+
+.bigPostStats{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 14px;
+    padding: 14px 0;
+}
+
+.bigPostStats > div{
+    display: flex;
+    gap:8px;
+}
+
+.bigPostComments{
+    background-color: #131313;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display:flex;
+    flex-direction: column;
+    padding: 14px;
+    gap:14px;
+}
+
+
+.bigPostComment > span{
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Work Sans Regular';
+}
+
+.bigPostComment > div{
+    display: flex;
+    align-items: center;
+    gap:12px;
+}
+
+.bigPostComment > div > span:nth-child(2){
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 10px;
+}
+
+.bigPost form{
+    padding: 8px;
+    display:flex;
+    gap:16px;
+}
+
+.bigPost input{
+    border:0;
+    background-color: #131313;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding:8px;
+    color:white;
+    font-size: 16px;
+    font-family: 'Work Sans Regular';
+    flex-grow: 1;
+}
+
+.bigPost form button{
+    border:0;
+    font-family: 'Space Grotesk Bold';
+    letter-spacing: 2px;
+    padding:12px;
+    cursor: pointer;
+}
+
+.bigPost form button:hover{
+    background-color: #B52619;
+    color: white;
+}
+
+.bigPostComments > span{
+    font-size: 12px;
+    padding:8px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    align-self: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bigPostComments > span:hover{
+    color: #B52619;
+}
+

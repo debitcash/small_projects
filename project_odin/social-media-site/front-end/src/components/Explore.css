@@ -1,0 +1,137 @@
+.exploreContainer{
+    width:1000px;
+    font-family: 'Space Grotesk Bold';
+    padding: 48px 0;
+}
+
+.exploreContainer h1{
+    font-size: 64px;
+    letter-spacing: -0.05em;
+    margin: 0;
+    line-height: 1;
+}
+
+.exploreContainer > p{
+    font-family: 'Work Sans Regular';
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+}
+
+.miniProfiles{
+    /*display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;*/
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+.miniProfile{
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #1B1B1B;
+    padding: 20px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    margin-bottom: 16px;
+}
+
+.miniProfile img{
+    height:90px;
+    width:90px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    object-fit: cover;
+    align-self: center;
+}
+
+.miniProfile span{
+    font-size: 16px;
+    font-family: 'Space Grotesk Bold';
+}
+
+.miniProfile > span{
+    letter-spacing: 2px;
+    align-self: center;
+}
+
+.miniProfile .stats > div span:nth-child(2){
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Work Sans Regular';
+}
+
+.miniProfile button{
+    height: 40px;
+    font-size: 14px;
+    font-family: 'Space Grotesk Bold';
+    border:0;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.miniProfile button:hover{
+    background-color: #B52619;
+    color: white;
+}
+
+.stats div{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:33%
+}
+
+.stats div:nth-child(2){
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    border-right: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.stats{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 16px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    padding-top: 16px;
+}
+
+.sortButtons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sortButton{
+    width:24%;
+    border: 2px solid white;
+    height: 48px;
+    font-size: 14px;
+    font-family: 'Space Grotesk Bold';
+    letter-spacing: 1px;
+    font-weight: bold;
+    background-color: #2A2A2A;
+    color: white;
+    cursor: pointer;
+}
+
+.sortButton:hover{
+    background-color: white;
+    color: black;
+}
+
+#morePostsContainer{
+    justify-content: center;
+    cursor: pointer;
+}
+
+#morePostsContainer:hover{
+    background-color: #2A2A2A;
+}
+
+.isFollowing{
+    color:white;
+    background-color: #B52619;
+}

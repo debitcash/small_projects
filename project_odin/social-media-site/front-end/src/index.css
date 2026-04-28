@@ -1,0 +1,43 @@
+body{
+  color: white;
+  background-color: #131313;
+  height:100vh;
+  margin: 0;
+}
+
+#root{
+  width: 100%;
+  height:100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+
+@font-face {
+  font-family: 'Space Grotesk Bold';
+  src: url('/src/assets/fonts/SpaceGrotesk-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk Regular';
+  src: url('/src/assets/fonts/SpaceGrotesk-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Epilogue Bold';
+  src: url('/src/assets/fonts/Epilogue-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans Regular';
+  src: url('/src/assets/fonts/WorkSans-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}

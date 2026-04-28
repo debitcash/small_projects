@@ -1,0 +1,69 @@
+.header{
+    border-bottom:4px solid white;
+    background-color: black;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    box-sizing: border-box;
+}    
+    
+.header h1{
+    font-size: 30px;
+    letter-spacing: -1.5px;
+    font-family: 'Space Grotesk Bold';
+    margin: 0;
+    line-height: 1;
+}
+
+.headerLeft a{
+    font-size: 18px;
+    font-family: 'Space Grotesk Regular';
+    font-weight: bold;
+    color: #474747;
+    cursor: pointer;
+    text-decoration:none;
+}
+
+.headerLeft a:hover{
+    border-bottom: 4px solid #B52619;
+    color: white;
+}
+
+.headerLeft{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.headerRight{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.headerRight input{
+    width: 300px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0 16px;
+    font-size: 13px;
+    color: #474747;
+}
+
+.headerRight button{
+    width:140px;
+    height:40px;
+    background-color: white;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.headerRight button:hover{
+    background-color: #B52619;
+    color:white
+}
+
+

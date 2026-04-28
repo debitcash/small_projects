@@ -1,0 +1,276 @@
+.profileContainer{
+    width:1000px;
+    background-color: #131313;
+}
+
+.personalInformation{
+    display: flex;
+    font-family: 'Space Grotesk Bold';
+    height: 400px;
+    background: radial-gradient(circle at center, #2A2A2A 0%, #131313 70%, #000000 100%);
+    gap:36px;
+    align-items: flex-end;
+    padding: 36px;
+}
+
+.personalInformation button{
+    height:48px;
+    width:175px;
+    background-color: white;
+    font-family: 'Space Grotesk Bold';
+    letter-spacing: 0.5px;
+    border: 0;
+    cursor: pointer;
+}
+
+.personalInformation button:hover{
+    background-color: #B52619;
+    color: white;
+}
+
+.personalInformation p, #descriptionInput{
+    font-family: 'Work Sans Regular';
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+}
+
+.imageContainer{
+    position:relative;
+    width:125px;
+    height:125px;
+}
+
+.imageContainer img{
+    position: relative;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    z-index: 2;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+.redAvatarShadow{
+    height:125px;
+    width:125px;
+    background-color: #B52619;
+    position: absolute;
+    top:8px;
+    left:8px;
+}
+
+.nameAndEditContainer h1{
+    font-size: 64px;
+    letter-spacing: -0.05em;
+    margin: 0;
+    line-height: 1;
+}
+
+.nameAndEditContainer input:nth-of-type(1){
+    font-family: 'Space Grotesk Bold';
+    font-size: 64px;
+    letter-spacing: -0.05em;
+    margin: 0;
+    line-height: 1;
+    width:510px;
+    background-color: transparent;
+    border:2px solid white;
+    color: white;
+}
+
+.nameAndEditContainer span{
+    font-family: 'Space Grotesk Bold';
+    font-size: 64px;
+    letter-spacing: -0.05em;
+    margin: 0;
+    line-height: 1;
+}
+
+.allStats{
+    padding-bottom: 14px;
+}
+
+.nameAndEditContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.personalInformation>div:nth-child(2){
+    flex-grow: 1;
+}
+
+.allStats{
+    display: flex;
+    justify-content: space-between;
+}
+
+.statsContainer{
+    width: 20%;
+    height:50px;
+    background-color: #2A2A2A;
+    display: flex;
+    flex-direction: column;
+    padding:8px;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+    border-left: white solid 4px;
+    padding-left: 16px;
+}
+
+.statsContainer span:nth-child(1){
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.statsContainer span:nth-child(2){
+    font-size: 28px;
+}
+
+.post{
+    height:500px;
+    width:320px;
+    background-color: #1B1B1B;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.posts{
+    /*display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    */margin-top: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.postHeader img, .extraPostInfo img{
+    height: 24px;
+    width: auto;
+}
+
+.postHeader{
+    display: flex;
+    justify-content: space-between;
+    padding:14px;
+}
+
+.postHeader span{
+    font-size: 16px;
+    font-family: 'Space Grotesk Bold';
+    font-weight: bold;
+}
+
+.post p{
+    font-family: 'Work Sans Regular';
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.postImage img{
+    width: 100%;
+    height:100%;
+    object-fit: contain;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.postImage{
+    width:100%;
+    height:50%;
+}
+
+.extraPostInfo>div{
+    display: flex;
+    padding-top:16px;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    align-items: center;
+}
+.extraPostInfo{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Space Grotesk Bold';
+    flex-grow: 1;
+    min-height: 50px; /* to enforce the scroll */
+}
+
+.extraPostInfo p{
+    margin: 0;
+    overflow: scroll;
+    margin-bottom: 8px;
+    min-width: 0;
+}
+
+.extraPostInfo span{
+    color : rgba(255, 255, 255, 0.7);
+}
+
+.postStatsImages{
+    display:flex;
+    gap:14px;
+}
+
+.morePersonalPosts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Space Grotesk Bold';
+    gap:18px;
+}
+
+.morePersonalPosts img{
+    height:90px;
+    width:90px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    object-fit: cover;
+    align-self: center;
+}
+
+#updatePictureBox{
+    height: 48px;
+    border: 0;
+    width: 48px;
+}
+
+.imageContainer label{
+    margin:0;
+    position: absolute;
+    height: 100%;
+    width:100%;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.imageContainer label:hover{
+    background-color: #2A2A2A;
+    cursor: pointer;
+}
+
+#descriptionInput{
+    background-color: transparent;
+    border: 2px solid white;
+    margin-bottom: 16px;
+    margin-top:16px;
+    max-height: 100px;
+    min-width:500px;
+}
+
+#follower{
+    background-color: #B52619;
+    color: white;
+}

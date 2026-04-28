@@ -1,0 +1,159 @@
+.mainContainer{
+    display: flex;
+    align-items: stretch;
+    min-height: 600px;
+    width:1000px;
+    margin-top: 86px;
+}
+
+.leftContainer h1{
+    font-size: 90px;
+    letter-spacing: -0.05em;
+    font-family: 'Space Grotesk Bold';
+    margin: 0;
+    line-height: 1;
+}
+
+.leftContainer{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    width:60%;
+}
+
+.leftContainer div{
+    position: relative;
+}
+
+.leftContainer img{
+    height:110px;
+    width: auto;
+    position: absolute;
+    right:0px;
+    bottom:-70px;
+}
+
+.nameContainer{
+    transform: rotate(-20deg);
+}
+
+.rightContainer{
+    background-color: #2A2A2A;
+    padding:48px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 250px;
+}
+
+.leftContainer span{
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: #B52619;
+    font-family: 'Epilogue Bold';
+}
+
+.rightContainer form{
+    display: flex;
+    flex-direction: column;
+    gap:28px;
+}
+
+.switchContainer{
+}
+
+.githubContainer{
+    align-self: center;
+    display: flex;
+    align-items: center;
+    gap:8px;
+}
+
+.githubContainer img{
+    height: 28px;
+}
+
+.loginAndRegisterForm h1{
+    font-size: 36px;
+    letter-spacing: -0.05em;
+    font-family: 'Space Grotesk Bold';
+    margin:0;
+    line-height: 1;
+}
+
+.redUnderline{
+    height: 5px;
+    background-color: #B52619;
+    width:20%;
+}
+
+.loginAndRegisterForm span{
+    font-size: 12px;
+    font-family: 'Epilogue Bold';
+    color: #474747;
+}
+
+.loginAndRegisterForm input{
+    font-size: 14px;
+    font-family: 'Work Sans Regular';
+    color: white;
+    background-color: #2A2A2A;
+    border: none;
+    border-bottom: 2px solid #474747;
+    height: 28px;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+}
+
+.loginAndRegisterForm button{
+    font-size: 16px;
+    font-family: 'Space Grotesk Bold';
+    color: black;
+    background-color: white;
+    border: none;
+    height:36px;
+    transition: transform 2s;
+}
+
+.loginAndRegisterForm button:hover{
+    cursor: pointer;
+    transform: rotate(-15deg);
+    transition: transform 2s;
+}
+
+.githubContainer a{
+    font-size: 14px;
+    font-family: 'Space Grotesk Bold';
+    color: white;
+}
+
+.switchContainer span, .switchContainer a{
+    font-size: 14px;
+    font-family: 'Work Sans Regular';
+    color: #474747;
+}
+
+.switchContainer a{
+    border-bottom: 2px solid #B52619;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.switchContainer a:hover{
+    color: #B52619;
+}
+
+.loginAndRegisterForm .passwordsMustMatch{
+    color:#B52619;
+}
+
+.loginAndRegisterForm .secondPasswordFieldInvalid{
+    background-color: rgba(181, 38, 25, 0.3);
+}
